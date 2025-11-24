@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feet to Kilometers Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="card" role="region" aria-label="Feet to kilometers converter">
+    <header>
+      <h1>Feet → Kilometers</h1>
+    </header>
+
+    <main>
+      <div class="row">
+        <label for="feetInput">Enter the distance you ran in feet:</label>
+        <div class="input-wrap">
+          <input
+            id="feetInput"
+            type="number"
+            inputmode="decimal"
+            min="0"
+            step="any"
+            placeholder="e.g., 5280"
+            aria-describedby="feetHelp feetError"
+          />
+          <span class="units">ft</span>
+        </div>
+        <div id="feetHelp" class="hint">Tip: 5,280 feet ≈ 1 mile.</div>
+        <div id="feetError" class="error">Please enter a non-negative number.</div>
+      </div>
+
+      <div class="row">
+        <button id="calcBtn" class="btn" type="button">Calculate</button>
+      </div>
+
+      <div class="row">
+        <div class="result" aria-live="polite">
+          <div class="result-line">
+            <span>Kilometers</span>
+            <span id="kmValue" class="value">0</span>
+          </div>
+          <div class="result-line">
+            <span>Meters</span>
+            <span id="mValue" class="value">0</span>
+          </div>
+          <div class="result-line">
+            <span>Miles</span>
+            <span id="miValue" class="value">0</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <button id="clearBtn" class="btn" type="button" aria-label="Clear input">Clear</button>
+      <span>Conversion uses 1 ft = 0.3048 m.</span>
+    </footer>
+  </section>
+
+  <!-- Link external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
